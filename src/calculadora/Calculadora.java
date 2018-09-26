@@ -7,20 +7,23 @@ public class Calculadora {
     public static void main(String[] args) {
         Scanner in = new Scanner(System.in);
         
-        int num1 = 0;
-        int num2 = 0;
+        int numero1 = 0;
+        int numero2 = 0;
         
         System.out.println("Introdueix un nombre: ");
-        num1 = in.nextInt();
+        numero1 = in.nextInt();
         
         System.out.println("Introdueix un altre nombre: ");
-        num2 = in.nextInt();
+        numero2 = in.nextInt();
         
         System.out.println("Ara sumarem els dos nombres.");
-        suma(num1,num2);
+        suma(numero1,numero2);
         
         System.out.println("Ara restarem els dos nombres.");
-        resta(num1,num2);
+        resta(numero1,numero2);
+        
+        System.out.println("Ara multiplicarem els dos nombres.");
+        multiplicacio(numero1,numero2);
     }
     
     private static void suma(int x, int y){
@@ -37,5 +40,13 @@ public class Calculadora {
            resta = x-y;
            
            System.out.println("La resta dels dos nombres dona: "+x+" - "+y+" = "+resta+". ");
+    }
+    
+    private static void multiplicacio(int x, int y){
+           int multiplicacio = 0;
+           
+           multiplicacio = x*y;
+           
+           System.out.println("La multiplicacio dels dos nombres dona: "+x+" * "+y+" = "+multiplicacio+". ");
     }
 }
