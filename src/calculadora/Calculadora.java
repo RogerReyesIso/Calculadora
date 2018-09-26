@@ -22,6 +22,8 @@ public class Calculadora {
     
     private static void suma(int x, int y){
            int suma = 0;
+           int popoi = 0;
+           int poepon = 0;
            
            suma = x+y;
            
