@@ -15,6 +15,16 @@ public class Calculadora {
         
         System.out.println("Introdueix un altre nombre: ");
         num2 = in.nextInt();
+        
+        System.out.println("Ara sumarem els dos nombres.");
+        suma(num1,num2);
     }
     
+    private static void suma(int x, int y){
+           int suma = 0;
+           
+           suma = x+y;
+           
+           System.out.println("La suma dels dos nombres dona: "+x+" + "+y+" = "+suma+". ");
+    }    
 }
