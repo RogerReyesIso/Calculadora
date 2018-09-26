@@ -18,6 +18,9 @@ public class Calculadora {
         
         System.out.println("Ara sumarem els dos nombres.");
         suma(num1,num2);
+        
+        System.out.println("Ara restarem els dos nombres.");
+        resta(num1,num2);
     }
     
     private static void suma(int x, int y){
@@ -26,5 +29,13 @@ public class Calculadora {
            suma = x+y;
            
            System.out.println("La suma dels dos nombres dona: "+x+" + "+y+" = "+suma+". ");
-    }    
+    }
+    
+    private static void resta(int x, int y){
+           int resta = 0;
+           
+           resta = x-y;
+           
+           System.out.println("La resta dels dos nombres dona: "+x+" - "+y+" = "+resta+". ");
+    }
 }
