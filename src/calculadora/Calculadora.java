@@ -24,6 +24,9 @@ public class Calculadora {
         
         System.out.println("Ara multiplicarem els dos nombres.");
         multiplicacio(numero1,numero2);
+        
+        System.out.println("Ara dividirem els dos nombres.");
+        divisio(numero1,numero2);
     }
     
     private static void suma(int x, int y){
@@ -48,5 +51,13 @@ public class Calculadora {
            multiplicacio = x*y;
            
            System.out.println("La multiplicacio dels dos nombres dona: "+x+" * "+y+" = "+multiplicacio+". ");
+    }
+    
+    private static void divisio(int x, int y){
+           int divisio = 0;
+           
+           divisio = x/y;
+           
+           System.out.println("La divisio dels dos nombres dona: "+x+" / "+y+" = "+divisio+". ");
     }
 }
