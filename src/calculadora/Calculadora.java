@@ -1,8 +1,11 @@
 package calculadora;
 
+import java.util.InputMismatchException;
 import java.util.Scanner;
 
 public class Calculadora {
+    
+    static boolean correcte = false;
 
     public static void main(String[] args) {
         Scanner in = new Scanner(System.in);
@@ -10,11 +13,37 @@ public class Calculadora {
         int numero1 = 0;
         int numero2 = 0;
         
-        System.out.println("Introdueix un nombre: ");
-        numero1 = in.nextInt();
+        do{
+            try{
+            System.out.println("Introdueix un nombre: ");
+            numero1 = in.nextInt();
+            correcte = true;
+        }
+        catch(InputMismatchException e){
+            System.out.println("Ha de ser un nombre.");
+        }
+        in.nextLine();
+        }while(!correcte);
         
-        System.out.println("Introdueix un altre nombre: ");
-        numero2 = in.nextInt();
+        correcte = false;
+        
+        do{
+            do{
+            try{
+            System.out.println("Introdueix un altre nombre: ");
+            numero2 = in.nextInt();
+            correcte = true;
+        }
+        catch(InputMismatchException e){
+            System.out.println("Ha de ser un nombre.");
+        }
+        in.nextLine();
+        }while(!correcte);
+            
+            if(numero2 == 0){
+                System.out.println("Si el numero2 és 0 la divisio no es podra fer. ");
+            }
+        }while(numero2 == 0);
         
         System.out.println("Ara sumarem els dos nombres.");
         suma(numero1,numero2);
